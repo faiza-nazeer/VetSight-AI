@@ -1,0 +1,52 @@
+/* Shared page-level layout helpers used across dashboards and tools */
+.grid { display: grid; gap: 1rem; }
+.cols2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cols3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cols4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.auto { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.split { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+.stack { display: flex; flex-direction: column; gap: 1.25rem; }
+.row { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+.between { justify-content: space-between; }
+.muted { color: var(--ink-3); }
+.small { font-size: 0.88rem; }
+.strong { font-weight: 600; }
+.list { list-style: none; margin: 0; padding: 0; }
+.listItem { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--line-soft); flex-wrap: wrap; }
+.listItem:last-child { border-bottom: none; }
+.bullets { margin: 0 0 0.5rem; padding-inline-start: 1.25rem; }
+.bullets li { margin-bottom: 0.25rem; }
+.filters { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: flex-end; margin-bottom: 1rem; }
+.filters > * { min-width: 180px; }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 0.35rem 1rem; margin: 0; }
+.kv dt { color: var(--ink-3); }
+.kv dd { margin: 0; font-weight: 600; }
+.chips { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.chip { min-height: 40px; padding: 0.3rem 0.9rem; border-radius: 999px; border: 1.5px solid var(--green-200); background: #fff; cursor: pointer; font-weight: 600; color: var(--green-800); }
+.chip:hover { background: var(--green-50); }
+.chip[aria-pressed='true'] { background: var(--green-800); color: #fff; border-color: var(--green-800); }
+.chip:disabled { opacity: 0.45; cursor: not-allowed; }
+.callout { display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1rem 1.25rem; border-radius: 14px; background: var(--green-800); color: #fff; }
+.callout h3 { color: #fff; margin: 0 0 0.15rem; }
+.callout p { margin: 0; color: #cfe3d6; }
+.productCard { display: flex; flex-direction: column; gap: 0.6rem; height: 100%; }
+.price { font-family: var(--font-head); font-size: 1.25rem; font-weight: 700; }
+.tracker { display: flex; gap: 0; list-style: none; padding: 0; margin: 0.75rem 0 0; }
+.tracker li { flex: 1; text-align: center; font-size: 0.8rem; color: var(--ink-3); position: relative; padding-top: 22px; }
+.tracker li::before { content: ''; position: absolute; top: 5px; inset-inline: 0; height: 4px; background: var(--line); }
+.tracker li::after { content: ''; position: absolute; top: 0; inset-inline-start: calc(50% - 7px); width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--line); }
+.tracker li.done { color: var(--green-800); font-weight: 600; }
+.tracker li.done::before { background: var(--green-600); }
+.tracker li.done::after { background: var(--green-600); border-color: var(--green-600); }
+.tracker li:first-child::before { inset-inline-start: 50%; }
+.tracker li:last-child::before { inset-inline-end: 50%; }
+
+@media (max-width: 960px) {
+  .cols4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cols3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .split { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .cols2, .cols3, .cols4 { grid-template-columns: minmax(0, 1fr); }
+  .filters > * { flex: 1 1 100%; }
+}

@@ -1,0 +1,13 @@
+.layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
+.mapBox { position: relative; height: 560px; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: #dfe9e0; }
+.mapBox :global(.leaflet-container) { height: 100%; width: 100%; font-family: var(--font-body); }
+.legend { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.75rem; font-size: 0.9rem; }
+.legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.swatch { width: 14px; height: 14px; border-radius: 50%; display: inline-block; }
+.panel h3 { margin-bottom: 0.25rem; }
+.advice { margin-top: 1rem; padding: 0.9rem 1rem; border-radius: 10px; border-inline-start: 5px solid; }
+.adviceLow { background: var(--risk-low-bg); border-color: var(--risk-low); }
+.adviceMedium { background: var(--risk-med-bg); border-color: var(--risk-med); }
+.adviceHigh { background: var(--risk-high-bg); border-color: var(--risk-high); }
+.popup { min-width: 150px; line-height: 1.5; }
+@media (max-width: 960px) { .layout { grid-template-columns: minmax(0, 1fr); } .mapBox { height: 420px; } }

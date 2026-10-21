@@ -1,0 +1,17 @@
+.apptList { display: flex; flex-direction: column; gap: 0.9rem; }
+.appt { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; gap: 1rem; align-items: center; }
+.date { text-align: center; background: var(--green-100); color: var(--green-900); border-radius: 12px; padding: 0.5rem 0.25rem; line-height: 1.2; }
+.date b { display: block; font-family: var(--font-head); font-size: 1.6rem; }
+.date span { font-size: 0.82rem; }
+.apptMain h3 { margin: 0 0 0.2rem; font-size: 1.05rem; }
+.apptActions { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: flex-end; }
+.sectionTitle { display: flex; align-items: center; gap: 0.6rem; margin: 1.25rem 0 0.5rem; font-family: var(--font-head); font-weight: 700; }
+.sectionTitle:first-child { margin-top: 0; }
+.sectionTitle span { display: inline-flex; width: 26px; height: 26px; border-radius: 50%; background: var(--green-800); color: #fff; align-items: center; justify-content: center; font-size: 0.85rem; }
+.vets { display: flex; flex-direction: column; gap: 0.5rem; }
+.vetCard { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.75rem 1rem; border: 1.5px solid var(--line); border-radius: 12px; background: #fff; cursor: pointer; text-align: start; width: 100%; }
+.vetCard:hover { border-color: var(--green-600); }
+.vetCard[aria-checked='true'] { border-color: var(--green-800); background: var(--green-50); box-shadow: 0 0 0 3px var(--green-100); }
+.day { margin-bottom: 0.7rem; }
+.day > div:first-child { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.3rem; color: var(--ink-2); }
+@media (max-width: 640px) { .appt { grid-template-columns: 64px minmax(0, 1fr); } .apptActions { grid-column: 1 / -1; justify-content: flex-start; } }

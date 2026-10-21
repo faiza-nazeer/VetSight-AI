@@ -1,0 +1,29 @@
+.wrap { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.aside { position: relative; background: var(--green-900); color: #dcebe1; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+.aside::after { content: ''; position: absolute; inset: auto 0 0 0; height: 46%; background: repeating-linear-gradient(115deg, transparent 0 22px, rgba(224, 165, 38, 0.22) 22px 25px); mask-image: linear-gradient(to top, #000, transparent); -webkit-mask-image: linear-gradient(to top, #000, transparent); pointer-events: none; }
+.aside h2 { color: #fff; font-size: clamp(1.6rem, 1rem + 2vw, 2.4rem); max-width: 16ch; }
+.aside p { color: #bcd8c6; max-width: 38ch; }
+.asideTop { display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+.asideMid { position: relative; z-index: 1; }
+.main { display: flex; flex-direction: column; padding: 1.5rem; }
+.mainTop { display: flex; justify-content: flex-end; }
+.formBox { width: 100%; max-width: 440px; margin: auto; padding: 1.5rem 0; }
+.formBox h1 { font-size: 1.9rem; }
+.langBtn { display: inline-flex; align-items: center; gap: 0.4rem; border: 1.5px solid var(--line); background: #fff; border-radius: 8px; min-height: 40px; padding: 0 0.8rem; font-weight: 600; cursor: pointer; color: var(--ink-2); }
+.langBtnLight { border-color: rgba(255, 255, 255, 0.35); background: transparent; color: #fff; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+.switch { margin-top: 1.25rem; color: var(--ink-3); }
+.demo { margin-top: 1.5rem; padding: 1rem; border: 1px dashed var(--green-600); border-radius: 12px; background: var(--green-50); }
+.demo h4 { margin: 0 0 0.5rem; font-size: 0.95rem; }
+.demoRow { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.otpRow { display: flex; gap: 0.5rem; justify-content: center; direction: ltr; margin: 1rem 0; }
+.otpBox { width: 48px; height: 56px; text-align: center; font-size: 1.4rem; font-weight: 700; border: 1.5px solid var(--line); border-radius: 10px; }
+.otpBox:focus { outline: none; border-color: var(--water-600); box-shadow: 0 0 0 3px var(--water-100); }
+.roleGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-bottom: 1rem; }
+.roleCard { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; padding: 0.8rem 0.4rem; border: 1.5px solid var(--line); border-radius: 12px; background: #fff; cursor: pointer; font-weight: 600; text-align: center; }
+.roleCard[aria-checked='true'] { border-color: var(--green-800); background: var(--green-50); box-shadow: 0 0 0 3px var(--green-100); }
+.roleCard small { font-weight: 400; color: var(--ink-3); line-height: 1.4; }
+@media (max-width: 860px) {
+  .wrap { grid-template-columns: 1fr; }
+  .aside { display: none; }
+}

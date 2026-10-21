@@ -1,0 +1,18 @@
+.drop { border: 2px dashed var(--green-600); border-radius: 14px; background: var(--green-50); padding: 2rem 1rem; text-align: center; cursor: pointer; transition: background-color 0.15s, border-color 0.15s; }
+.drop:hover, .dropOn { background: var(--green-100); border-color: var(--green-800); }
+.drop p { margin: 0.25rem auto 0; color: var(--ink-3); }
+.preview { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.preview img { width: 160px; height: 120px; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); }
+.hidden { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.resultHead { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.name { font-family: var(--font-head); font-size: 1.6rem; font-weight: 700; margin: 0; }
+.confWrap { min-width: 180px; }
+.confLabel { display: flex; justify-content: space-between; font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+.bar { height: 10px; border-radius: 5px; background: var(--line-soft); overflow: hidden; }
+.bar i { display: block; height: 100%; border-radius: 5px; background: var(--green-600); }
+.barWarn i { background: var(--risk-med); }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; }
+.cols h4 { margin: 1rem 0 0.4rem; }
+.vetRow { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.7rem 0; border-top: 1px solid var(--line-soft); flex-wrap: wrap; }
+.analyzing { display: flex; align-items: center; gap: 1rem; padding: 1.25rem; border-radius: 12px; background: var(--water-100); color: var(--water-700); font-weight: 600; }
+@media (max-width: 700px) { .cols { grid-template-columns: 1fr; } }

@@ -1,0 +1,9 @@
+.bars { display: flex; flex-direction: column; gap: 0.8rem; }
+.bar { display: grid; grid-template-columns: minmax(110px, 190px) 1fr 44px; gap: 0.75rem; align-items: center; }
+.track { height: 12px; border-radius: 6px; background: var(--line-soft); overflow: hidden; }
+.fill { display: block; height: 100%; border-radius: 6px; background: var(--green-600); }
+.num { text-align: end; font-weight: 700; font-family: var(--font-head); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+.langHead { margin: 1rem 0 0.4rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--green-100); font-family: var(--font-head); font-weight: 700; }
+.stars { color: var(--wheat-600); letter-spacing: 2px; direction: ltr; display: inline-block; }
+@media (max-width: 700px) { .two { grid-template-columns: 1fr; } .bar { grid-template-columns: 1fr 44px; } .bar .track { grid-column: 1 / -1; grid-row: 2; } }
